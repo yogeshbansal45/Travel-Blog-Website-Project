@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelling Guy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">Travelling Guy</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <button id="openPopup" style="background-color: darkgreen; padding: 5px; color: azure;">Login</button>
+      <div class="overlay" id="loginOverlay">
+          <div class="popup">
+              <h2>Login</h2>
+              <input type="text" placeholder="Username" id="username">
+              <input type="password" placeholder="Password" id="password">
+              <button id="loginBtn">Login</button>
+              <button class="close-btn" id="closePopup">Close</button>
+          </div>
+      </div>
+  </nav></ul>
+
+  <!-- Hero Section -->
+  <section class="hero">
+  
+ <video autoplay loop muted class="backvideo">
+      <source src="assect/6624736-uhd_3840_2160_25fps.mp4">
+    </video>
+  <h1>Welcome to Travelling Guy</h1>
+    <p>Your ultimate guide to destinations, trips, and adventures.</p>
+    <a href="blog.html" class="btn">Explore the Blog</a>
+  </section>
+  <section class="blog-posts">
+    <h2>Trending Sites</h2>
+    <div class="post">
+        <img src="assect/DSCF1587_gal1.jpg" alt="Post Image 1">
+        <h3>ASIA</h3>
+        <p>Asia, the largest continent, is a vibrant blend of cultures, stunning landscapes, and iconic landmarks like the Taj Mahal and Great Wall. From bustling cities to serene beaches, it offers unforgettable experiences for every traveler.</p>
+        <a href="https://www.lonelyplanet.com/asia/places">Read More</a>
+    </div><div class="post">
+        <img src="assect/DSCF3261_gal1.jpg"alt="Post Image 2">
+        <h3>EUROPE</h3>
+        <p>Europe, a continent of timeless charm, boasts iconic landmarks like the Eiffel Tower, Colosseum, and Acropolis. With its rich history, diverse cultures, and scenic beauty, it offers unforgettable adventures for every traveler. </p>
+        <a href="https://www.holidify.com/collections/best-places-to-visit-in-europe">Read More</a>
+    </div>
+    <div class="post">
+        <img src="assect/DSCF8889_gal1.jpg" alt="Post Image 3">
+        <h3>AMERICA</h3>
+        <p>America, spanning North and South, offers iconic sights like the Grand Canyon, Statue of Liberty, and Machu Picchu. With diverse cultures, stunning landscapes, and vibrant cities, it promises unforgettable adventures.</p>
+        <a href="https://www.holidify.com/country/usa/places-to-visit.html">Read More</a>
+    </div><div class="post">
+      <img src="assect/DSCF3940_gal1.jpg" alt="Post Image 3">
+      <h3>AFRICA</h3>
+      <p>Africa, the cradle of humanity, is renowned for its majestic wildlife, iconic landmarks like the Pyramids of Giza, and breathtaking landscapes like Victoria Falls. From vibrant cultures to serene savannahs, it offers unforgettable adventures.</p>
+      <a href="https://www.thrillophilia.com/places-to-visit-in-africa">Read More</a>
+  </div>
+  </section>
+ <!-- Footer Section -->
+ <footer>
+  <p>&copy;2024 Travelling Guy</p>
+  <div class="footer-links">
+      <a href="https://www.facebook.com/demoforthewin/ " target="_blank">Facebook</a> |
+      <a href="https://x.com/"target="_blank">Twitter</a> |
+      <a href="https://www.linkedin.com/company/demo/"target="_blank">LinkedIn</a>
+  </div>
+</footer>
+  <script>
+        const openPopup = document.getElementById('openPopup');
+        const closePopup = document.getElementById('closePopup');
+        const overlay = document.getElementById('loginOverlay');
+
+        openPopup.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        closePopup.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
